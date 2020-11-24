@@ -33,6 +33,13 @@ public  void sumNumbersSeparatedByNewLineOrcomma() {
 	assertThat(StringCalculator.sum("1\n2,3"), is(6));
 	
 }
+@Test
+public  void sumNumbersdelimitedBydiffdel() {
+	assertThat(StringCalculator.sum("//;\n1;2"), is(3));
+}
+@Test(expected = IllegalArgumentException.class)
+public  void throwsOnNegativeNumber() {
+	StringCalculator.sum("-1");
 
-
+}
 }
