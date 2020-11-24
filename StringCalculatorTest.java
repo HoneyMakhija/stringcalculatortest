@@ -20,6 +20,19 @@ public  void sumEmptyStringto0() {
 public  void sumNumbersSeparatedByComma() {
 	assertThat(StringCalculator.sum("1,2"), is(3));
 	assertThat(StringCalculator.sum("2,4"), is(6));
+	assertThat(StringCalculator.sum("1,2,4"), is(7));
 	
 }
+@Test
+public  void sumNumbersSeparatedByNewLine() {
+	assertThat(StringCalculator.sum("1\n2"), is(3));
+	assertThat(StringCalculator.sum("2\n4"), is(6));
+}
+@Test
+public  void sumNumbersSeparatedByNewLineOrcomma() {
+	assertThat(StringCalculator.sum("1\n2,3"), is(6));
+	
+}
+
+
 }
