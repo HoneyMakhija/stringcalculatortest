@@ -16,4 +16,10 @@ public  void sumEmptyStringto0() {
 	assertThat(StringCalculator.sum("1"), is(1));
 	assertThat(StringCalculator.sum("2"), is(2));
 }
+@Test
+public  void sumNumbersSeparatedByComma() {
+	assertThat(StringCalculator.sum("1,2"), is(3));
+	assertThat(StringCalculator.sum("2,4"), is(6));
+	
+}
 }
